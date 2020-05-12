@@ -1,20 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+        Pizza Time
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">t2</ion-title>
     </ion-toolbar>
-  </ion-header>
+  </ion-header> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <ion-button routerLink="/pizzas">
+      <ion-icon name="pizza" slot="start"></ion-icon>
+      <ion-label>Nos Pizzas</ion-label>
+  </ion-button>
+
+  <ion-button routerLink="/panier">
+      <ion-icon name="basket" slot="start"></ion-icon>
+      <ion-label>Voir le panier</ion-label>
+  </ion-button>
+
+  <ion-button routerLink="/admin">
+      <ion-icon name="person-circle" slot="start"></ion-icon>
+      <ion-label>Admin</ion-label>
+  </ion-button>
+
+
+
 </ion-content>
