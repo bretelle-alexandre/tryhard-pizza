@@ -1,0 +1,7 @@
+{
+  "name": "tp-pizza",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
