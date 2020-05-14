@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { PizzasService } from "src/app/service/pizzas.service";
 
 @Component({
-  selector: 'app-pizzas',
-  templateUrl: './pizzas.page.html',
-  styleUrls: ['./pizzas.page.scss'],
+  selector: "app-pizzas",
+  templateUrl: "./pizzas.page.html",
+  styleUrls: ["./pizzas.page.scss"]
 })
-export class PizzasPage implements OnInit {
+export class PizzasPage {
+  constructor(public pizzasService: PizzasService) {}
 
-  constructor() { }
+  pizzasList: any[];
 
-  ngOnInit() {
+  ionViewDidEnter() {
+    console.log(this.pizzasList);
+    this.getAllPizzas();
+    console.log(this.pizzasList);
   }
 
+  getAllPizzas() {
+    //  this.pizzasList = await this.pizzasService.getPizzas().toPromise();
+
+    this.pizzasService.getPizzas().subscribe(
+      value => {
+        this.pizzasList = value;
+        console.log(value);
+      },
+      erreur => {
+        //show error
+      }
+    );
+  }
 }
