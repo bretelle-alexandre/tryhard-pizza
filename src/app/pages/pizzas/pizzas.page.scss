@@ -1,0 +1,25 @@
+.navigationBarre {
+  display: flex;
+}
+
+.cataloguePizza {
+  background-color: aqua;
+  width: auto;
+  text-align: center;
+  margin: 5vh 15vw;
+  padding: 10px;
+}
+
+.cataloguePizza a {
+  text-decoration: none;
+}
+
+.cataloguePizza p {
+  margin: 5px;
+}
+
+ion-button {
+  height: 5vh;
+  width: 50vw;
+  font-size: 12px;
+}

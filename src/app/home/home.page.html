@@ -1,34 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-        Pizza Time
+      Pizza Time 🔥
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">t2</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
-
-
-  <ion-button routerLink="/pizzas">
+  <div class="navigationBarre">
+    <ion-button routerLink="/pizzas">
       <ion-icon name="pizza" slot="start"></ion-icon>
       <ion-label>Nos Pizzas</ion-label>
-  </ion-button>
+    </ion-button>
 
-  <ion-button routerLink="/panier">
+    <ion-button routerLink="/panier">
       <ion-icon name="basket" slot="start"></ion-icon>
       <ion-label>Voir le panier</ion-label>
-  </ion-button>
+    </ion-button>
 
-  <ion-button routerLink="/admin">
+    <ion-button routerLink="/admin">
       <ion-icon name="person-circle" slot="start"></ion-icon>
       <ion-label>Admin</ion-label>
-  </ion-button>
-
-
-
+    </ion-button>
+  </div>
 </ion-content>

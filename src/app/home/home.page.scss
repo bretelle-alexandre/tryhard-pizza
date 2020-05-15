@@ -25,3 +25,14 @@
 #container a {
   text-decoration: none;
 }
+
+.navigationBarre {
+  display: flex;
+  justify-content: space-around;
+}
+
+ion-button {
+  height: 5vh;
+  width: 30vw;
+  font-size: 10px;
+}
