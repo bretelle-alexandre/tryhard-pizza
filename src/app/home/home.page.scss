@@ -36,3 +36,16 @@ ion-button {
   width: 30vw;
   font-size: 10px;
 }
+
+p {
+  margin: 10vh 10vw 0 10vw;
+}
+
+.imagePizza {
+  height: 200px;
+  width: auto;
+  background-image: url("../../../resources/images/pizza.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 5vh 10vw;
+}

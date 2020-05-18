@@ -47,5 +47,7 @@ export class PizzasPage {
     );
   }
 
-  addToBask() {}
+  addToBasket() {
+    console.log("AddToBasket");
+  }
 }

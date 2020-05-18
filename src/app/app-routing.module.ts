@@ -24,9 +24,7 @@ const routes: Routes = [
   {
     path: "panier",
     loadChildren: () =>
-      import("./pages/pizzas/single-pizza/single-pizza.module").then(
-        m => m.SinglePizzaPageModule
-      )
+      import("./pages/panier/panier.module").then(m => m.PanierPageModule)
   },
   {
     path: "single-pizza",
