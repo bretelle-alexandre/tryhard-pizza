@@ -33,13 +33,27 @@ export class PizzasPage {
     console.log(this.pizzasList);
   }
 
+  // tests = this.getAllPizzas();
+  //   tests = [
+  //   { name: "jojo", prix: "1" },
+  //   { name: "rere", prix: "5" }
+  // ];
+
+  tests: any;
+
   getAllPizzas() {
     //  this.pizzasList = await this.pizzasService.getPizzas().toPromise();
 
     this.pizzasService.getPizzas().subscribe(
       value => {
         this.pizzasList = value;
-        console.log(value);
+        let pizzapi = JSON.parse(JSON.stringify(value));
+        // let pizzapi = JSON.stringify(value);
+
+        console.log(pizzapi);
+        this.tests = pizzapi;
+        // var zert = new Array()
+        // return ["pizzapi", "zet", "eqf"];
       },
       erreur => {
         //show error
@@ -49,5 +63,22 @@ export class PizzasPage {
 
   addToBasket() {
     console.log("AddToBasket");
+  }
+
+  // tests = this.getAllPizzas;
+
+  getAllPizzasV2() {
+    //  this.pizzasList = await this.pizzasService.getPizzas().toPromise();
+
+    this.pizzasService.getPizzas().subscribe(
+      value => {
+        this.pizzasList = value;
+        let pizzapi = JSON.parse(JSON.stringify(value));
+        console.log(pizzapi);
+      },
+      erreur => {
+        //show error
+      }
+    );
   }
 }
