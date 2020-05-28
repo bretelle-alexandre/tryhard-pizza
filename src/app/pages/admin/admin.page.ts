@@ -52,7 +52,7 @@ export class AdminPage {
   deletePizza(id) {
     this.pizzasService.deletePizza(id).subscribe(x => {
       this.pizzasList = this.pizzasList.filter(pizzaDeLaliste => {
-        pizzaDeLaliste.id != id;
+        return pizzaDeLaliste.id != id;
       });
     });
   }
