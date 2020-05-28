@@ -17,4 +17,10 @@ export class PizzasService {
       `https://api.ynov.jcatania.io/pizza/${id.toString()}`
     );
   }
+
+  deletePizza(id: Number): Observable<any> {
+    return this.http.delete<any>(
+      `https://api.ynov.jcatania.io/pizza/${id.toString()}`
+    );
+  }
 }

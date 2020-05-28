@@ -17,23 +17,15 @@
     </ion-button>
   </div>
 
-  <!-- <div id="test">
-    <div class="cataloguePizza">
-      <a href="..">
-        <img src="photoDeLaPizza" />
-        <p>Royal: 12,5 €</p>
-      </a>
-      <ion-button (click)="addToBasket()">
-        <ion-label>Ajouter au Panier</ion-label>
-      </ion-button>
-    </div> -->
-
   <div *ngFor="let test of tests">
     <div class="cataloguePizza">
       <img src="{{test.photo}}" />
       <span>
         {{test.nom}} : {{test.prix}} €
       </span>
+      <ion-button (click)="updatePizza()" class="addToBasket"
+        >Ajouter au panier</ion-button
+      >
     </div>
   </div>
 
