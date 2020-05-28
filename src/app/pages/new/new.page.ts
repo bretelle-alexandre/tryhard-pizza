@@ -5,6 +5,7 @@ import {
   ViewContainerRef,
   ComponentFactoryResolver
 } from "@angular/core";
+import Pizza from "src/app/model/Pizza";
 
 @Component({
   selector: "app-new",
@@ -13,6 +14,8 @@ import {
 })
 export class NewPage {
   constructor(public pizzasService: PizzasService) {}
+
+  maPizza: Pizza = null;
 
   ionViewDidEnter() {
     this.getAllPizzas();
@@ -37,7 +40,17 @@ export class NewPage {
     );
   }
 
-  createPizza() {}
-  deletePizza() {}
-  updatePizza() {}
+  createPizza(form) {
+    this.maPizza = {
+      id: null,
+      ingredients: [],
+      nom: form.nom,
+      photo: form.picture,
+      prix: form.prix
+    };
+    console.log(this.maPizza);
+    this.pizzasService.createPizza(this.maPizza).subscribe(x => {
+      console.log(x);
+    });
+  }
 }

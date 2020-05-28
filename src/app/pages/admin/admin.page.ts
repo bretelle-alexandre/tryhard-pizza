@@ -6,6 +6,7 @@ import {
   ComponentFactoryResolver
 } from "@angular/core";
 import { ArticleComponent } from "../../article/article.component";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-admin",
@@ -15,7 +16,8 @@ import { ArticleComponent } from "../../article/article.component";
 export class AdminPage {
   constructor(
     public pizzasService: PizzasService,
-    private resolver: ComponentFactoryResolver
+    private resolver: ComponentFactoryResolver,
+    private router: Router
   ) {}
 
   entry: ViewContainerRef;
@@ -45,15 +47,15 @@ export class AdminPage {
     );
   }
 
-  updatePizza() {
-    console.log("it work");
-  }
-
   deletePizza(id) {
     this.pizzasService.deletePizza(id).subscribe(x => {
       this.pizzasList = this.pizzasList.filter(pizzaDeLaliste => {
         return pizzaDeLaliste.id != id;
       });
     });
+  }
+
+  goPizza(id) {
+    this.router.navigate(["update", id]);
   }
 }

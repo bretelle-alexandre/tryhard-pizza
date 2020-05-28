@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Admin 🛠️</ion-title>
+    <ion-title>Creation d'une nouvelle pizza 🍕</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,9 +18,9 @@
 
   <div *ngFor="let test of pizzasList">
     <div class="cataloguePizza">
-      <img src="{{test.photo}}" />
+      <img [src]="test.photo" />
       <span>{{test.nom}} : {{test.prix}} €</span>
-      <ion-button (click)="updatePizza()">Modifier</ion-button
+      <ion-button (click)="goPizza(test.id)">Modifier</ion-button
       ><!-- (test.id , { objet pizza} ) -->
       <ion-button (click)="deletePizza(test.id)">Supprimer</ion-button>
     </div>

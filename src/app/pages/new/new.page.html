@@ -5,23 +5,20 @@
 </ion-header>
 
 <ion-content>
-  <form style="padding: 10px;">
-    <label for="name">Nom</label> :
-    <input style="color: brown;" type="text" name="name" id="name" required />
-    <br />
-    <!--  -->
-    <label for="name">Prix</label> :
-    <input style="color: brown;" type="text" name="name" id="name" required />
-    <br />
-    <!--  -->
-    <label for="name">Image</label> :
-    <input style="color: brown;" type="text" name="name" id="name" required />
-    <!--  -->
-    <ion-button type="submit" style="margin-top: 20px;">Envoyer</ion-button>
+  <form #form="ngForm" (ngSubmit)="createPizza(form.value)" novalidate>
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input type="text" required ngModel name="nom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Prix</ion-label>
+      <ion-input type="number" required ngModel name="prix"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Photo</ion-label>
+      <ion-input type="text" required ngModel name="picture"></ion-input>
+    </ion-item>
+
+    <ion-button ion-button type="submit" block>Nouvelle pizza</ion-button>
   </form>
 </ion-content>
-
-<!-- <p>Image :</p>
-<p>Nom :</p>
-<p>Prix :</p>
-<p>Ingrédients :</p> -->

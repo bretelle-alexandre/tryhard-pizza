@@ -68,7 +68,4 @@ export class PizzasPage {
   //     }
   //   );
   // }
-  updatePizza() {
-    console.log("it work");
-  }
 }

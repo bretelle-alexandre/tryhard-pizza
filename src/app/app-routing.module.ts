@@ -37,6 +37,11 @@ const routes: Routes = [
     path: "new",
     loadChildren: () =>
       import("../app/pages/new/new.module").then(m => m.NewPageModule)
+  },
+  {
+    path: "update/:id",
+    loadChildren: () =>
+      import("../app/pages/update/update.module").then(m => m.UpdatePageModule)
   }
 ];
 

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modification d'une pizza 🍕</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <form
+      #form="ngForm"
+      (ngSubmit)="updatePizza(form.value)"
+      novalidate
+      class="formPizza"
+    >
+      <ion-item>
+        <ion-label>Nom :</ion-label>
+        <ion-input
+          type="text"
+          required
+          [ngModel]="maPizzaUpdate.nom"
+          name="nom"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Prix :</ion-label>
+        <ion-input
+          type="number"
+          required
+          [ngModel]="maPizzaUpdate.prix"
+          name="prix"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Photo :</ion-label>
+        <ion-input
+          type="text"
+          required
+          [ngModel]="maPizzaUpdate.photo"
+          name="picture"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button ion-button type="submit" block
+        >Mettre à jour une pizza</ion-button
+      >
+    </form>
+  </div>
+</ion-content>
