@@ -19,6 +19,13 @@ export class UpdatePage implements OnInit {
     private router: Router
   ) {
     this.pizzaId = this.route.snapshot.paramMap.get("id");
+    this.maPizzaUpdate = {
+      id: null,
+      photo: "",
+      nom: "",
+      prix: null,
+      ingredients: null
+    };
   }
 
   ngOnInit() {
