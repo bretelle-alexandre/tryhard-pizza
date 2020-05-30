@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { PizzasPage, addToBasket } from "../pizzas/pizzas.page";
+// import { PizzasPage, addToBasket } from "../pizzas/pizzas.page";
 
 @Component({
   selector: "app-panier",
@@ -10,8 +10,7 @@ export class PanierPage implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(PizzasPage);
-    console.log(addToBasket);
+    // console.log(PizzasPage);
   }
   helloWorld = "Hello World";
   prix = 12;

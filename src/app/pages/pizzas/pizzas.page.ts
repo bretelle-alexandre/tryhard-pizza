@@ -8,7 +8,11 @@ import {
 import { ArticleComponent } from "../../article/article.component";
 
 export module addToBasket {}
-
+@Component({
+  selector: "app-pizzas",
+  templateUrl: "./pizzas.page.html",
+  styleUrls: ["./pizzas.page.scss"]
+})
 export class PizzasPage {
   constructor(
     public pizzasService: PizzasService,
@@ -49,11 +53,11 @@ export class PizzasPage {
 
   addToBasket(id, nom, photo, prix) {
     console.log("AddToBasket");
-    // Get PizzaId ( name / price / picture / id)
-    console.log(id, nom, photo, prix);
-    // Put PizzaId value in BasketArray
-    var BasketArray = new Array();
-    BasketArray = [id, nom, photo, prix];
-    console.log("Pizza : " + BasketArray);
+    // // Get PizzaId ( name / price / picture / id)
+    // console.log(id, nom, photo, prix);
+    // // Put PizzaId value in BasketArray
+    // var BasketArray = new Array();
+    // BasketArray = [id, nom, photo, prix];
+    // console.log("Pizza : " + BasketArray);
   }
 }
