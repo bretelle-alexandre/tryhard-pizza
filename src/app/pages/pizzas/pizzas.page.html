@@ -13,7 +13,7 @@
 
     <ion-button routerLink="/panier">
       <ion-icon name="basket" slot="start"></ion-icon>
-      <ion-label>Votre Panier</ion-label>
+      <ion-label>Panier</ion-label>
     </ion-button>
   </div>
 
@@ -23,7 +23,10 @@
       <span>
         {{test.nom}} : {{test.prix}} €
       </span>
-      <ion-button class="addToBasket">Ajouter au panier</ion-button>
+      <ion-button
+        (click)="addToBasket(test.id, test.nom, test.photo, test.prix)"
+        >Ajouter au panier</ion-button
+      >
     </div>
   </div>
 

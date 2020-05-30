@@ -7,11 +7,8 @@ import {
 } from "@angular/core";
 import { ArticleComponent } from "../../article/article.component";
 
-@Component({
-  selector: "app-pizzas",
-  templateUrl: "./pizzas.page.html",
-  styleUrls: ["./pizzas.page.scss"]
-})
+export module addToBasket {}
+
 export class PizzasPage {
   constructor(
     public pizzasService: PizzasService,
@@ -48,24 +45,15 @@ export class PizzasPage {
     );
   }
 
-  // addToBasket() {
-  //   console.log("AddToBasket");
-  // }
+  textRandom = "Hello world";
 
-  // tests = this.getAllPizzas;
-
-  // getAllPizzasV2() {
-  //   //  this.pizzasList = await this.pizzasService.getPizzas().toPromise();
-
-  //   this.pizzasService.getPizzas().subscribe(
-  //     value => {
-  //       this.pizzasList = value;
-  //       let pizzapi = JSON.parse(JSON.stringify(value));
-  //       console.log(pizzapi);
-  //     },
-  //     erreur => {
-  //       //show error
-  //     }
-  //   );
-  // }
+  addToBasket(id, nom, photo, prix) {
+    console.log("AddToBasket");
+    // Get PizzaId ( name / price / picture / id)
+    console.log(id, nom, photo, prix);
+    // Put PizzaId value in BasketArray
+    var BasketArray = new Array();
+    BasketArray = [id, nom, photo, prix];
+    console.log("Pizza : " + BasketArray);
+  }
 }
