@@ -49,15 +49,16 @@ export class PizzasPage {
     );
   }
 
-  textRandom = "Hello world";
-
-  addToBasket(id, nom, photo, prix) {
+  addToBasket(pizza) {
     console.log("AddToBasket");
-    // // Get PizzaId ( name / price / picture / id)
-    // console.log(id, nom, photo, prix);
-    // // Put PizzaId value in BasketArray
-    // var BasketArray = new Array();
-    // BasketArray = [id, nom, photo, prix];
-    // console.log("Pizza : " + BasketArray);
+    console.log(pizza);
+    let arr = [];
+
+    if (localStorage.getItem("pizzArray")) {
+      arr = JSON.parse(localStorage.getItem("pizzArray"));
+      localStorage.setItem("pizzArray", JSON.stringify(arr));
+    }
+    arr.push(pizza);
+    localStorage.setItem("pizzArray", JSON.stringify(arr));
   }
 }
