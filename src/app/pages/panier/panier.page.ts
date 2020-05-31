@@ -10,31 +10,21 @@ import { empty } from "rxjs";
 export class PanierPage {
   constructor() {}
   stored_datas = [];
-  tun;
-  tdeux;
+  total: number = 0;
 
   ionViewDidEnter() {
     this.stored_datas = JSON.parse(localStorage["pizzArray"]);
-    console.log(this.stored_datas);
 
     if (this.stored_datas == null) {
-      // affiche <p>Votre panier est vide</p>
       document.getElementById("empty").style.display = "block";
     } else {
-      // affiche le panier
       document.getElementById("empty").style.display = "none";
+      document.getElementById("notEmpty").style.display = "flex";
     }
 
-    this.tun = JSON.stringify(this.stored_datas);
-    this.tdeux = JSON.parse(this.tun);
-    console.log("tun : " + this.tun);
-    console.log("tdeux : " + this.tdeux);
+    this.stored_datas.forEach(element => {
+      this.total += +element.prix;
+    });
+    console.log(this.total);
   }
-
-  // tabPizza = JSON.parse(this.someth);
-
-  // Get BasketArray
-
-  // Show BasketArray
-  // CRUD lowcost BasketArray
 }

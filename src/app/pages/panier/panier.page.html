@@ -5,10 +5,11 @@
 </ion-header>
 
 <ion-content>
-  <div>
-    <p>{{ tun }}</p>
-    <p>{{ tdeux }}</p>
+  <div *ngFor="let item of stored_datas">
+    <p>{{"Nom : " + item.nom}}</p>
+    <p>{{"Prix : " + item.prix + " €"}}</p>
+    <p>--------------------------</p>
   </div>
-  <p id="empty">Votre panier est vide</p>
-  <!-- <p>Total : {{ total }}</p> -->
+  <p id="notEmpty">Total : {{ total }}€</p>
+  <span id="empty">Votre panier est vide</span>
 </ion-content>
